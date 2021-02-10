@@ -20,6 +20,11 @@
         "prettier"
     ],
     "rules": {
-        "prettier/prettier": "error"
+        "prettier/prettier": "error",
+        "import/prefer-default-export": "off",
+        "jsx-quotes": [
+            "error",
+            "prefer-single"
+        ]
     }
 }
