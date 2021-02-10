@@ -8,6 +8,7 @@ export const View = styled.View`
 
 export const Header = styled.View`
     flex-direction: row;
+    align-items: center;
     justify-content: space-between;
     margin-top: 1px;
     margin-bottom: 5px;

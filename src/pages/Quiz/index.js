@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { ScrollView, StatusBar } from 'react-native';
+import { ScrollView, StatusBar, Animated } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import { CountdownCircleTimer } from 'react-native-countdown-circle-timer'
 import { View, Text, Image, Button, TextButton, Header, Content } from './styles';
 import { questoes } from '../../questoes';
 
@@ -27,7 +28,22 @@ export default function Quiz() {
             <ScrollView>
                 <Header>
                     <Text topSize={'5px'} bottomSize={'5px'} leftSize={'0px'} rightSize={'0px'} fontSize={'12px'}>Questão: {currentQuestion + 1}/15</Text>
-                    <Text topSize={'5px'} bottomSize={'5px'} leftSize={'0px'} rightSize={'0px'} fontSize={'12px'}>Tempo: 10:00</Text>
+                    <CountdownCircleTimer
+                        onComplete={() => {
+                            navigation.navigate('Score', { score: score });
+                        }}
+                        isPlaying
+                        duration={600}
+                        size={39}
+                        strokeWidth={3}
+                        colors="#ED1C24"
+                    >
+                        {({ remainingTime, animatedColor }) => (
+                            <Animated.Text style={{ color: '#FFFFFF' }}>
+                                {(Math.floor(remainingTime / 60) + ':' + (remainingTime % 60))}
+                            </Animated.Text>
+                        )}
+                    </CountdownCircleTimer>
                 </Header>
                 <Content>
                     <Image source={questoes[currentQuestion].imagem} />
