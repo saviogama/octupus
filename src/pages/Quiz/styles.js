@@ -41,7 +41,7 @@ export const Button = styled.TouchableOpacity`
     margin-bottom: ${props => props.bottomSize};
     margin-left: ${props => props.leftSize};
     width: ${props => props.widthSize};
-    height: 40px;
+    height: 50px;
     background-color: #272727;
     justify-content: center;
     align-items: center;

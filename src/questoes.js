@@ -1,5 +1,6 @@
 export const questoes = [
     {
+        imagem: require('./assets/question1.png'),
         questao: 'Quando foi lançado o primeiro Metal Gear?',
         opcoes: [
             { resposta: '1998', correto: false },
@@ -10,6 +11,7 @@ export const questoes = [
         ]
     },
     {
+        imagem: require('./assets/question2.jpg'),
         questao: 'Qual é o verdadeiro nome de Naked Snake e Solid Snake, respectivamente?',
         opcoes: [
             { resposta: 'Adam e David', correto: false },
@@ -20,6 +22,7 @@ export const questoes = [
         ]
     },
     {
+        imagem: require('./assets/question3.jpg'),
         questao: 'O que é FOXDIE?',
         opcoes: [
             { resposta: 'FOXDIE é uma raposa morta', correto: false },
@@ -30,6 +33,7 @@ export const questoes = [
         ]
     },
     {
+        imagem: require('./assets/question4.jpg'),
         questao: 'Por que o codinome de Hal Emmerich é Otacon?',
         opcoes: [
             { resposta: 'Porque ele tem o livre arbítrio de escolher seu codinome', correto: false },
@@ -40,6 +44,7 @@ export const questoes = [
         ]
     },
     {
+        imagem: require('./assets/question5.png'),
         questao: 'Quais são os nomes dos clones que sobreviveram de Big Boss?',
         opcoes: [
             { resposta: 'Ocelot, Sniper Wolf e Animago', correto: false },
@@ -50,6 +55,7 @@ export const questoes = [
         ]
     },
     {
+        imagem: require('./assets/question6.png'),
         questao: 'No final de Metal Gear Solid 3, quando The Boss morre, é possível ver o espírito dela com outro. Quem é esse espírito?',
         opcoes: [
             { resposta: 'The Sorrow', correto: true },
@@ -60,6 +66,7 @@ export const questoes = [
         ]
     },
     {
+        imagem: require('./assets/question7.jpg'),
         questao: 'Qual é o parceiro de rádio do Big Boss em Metal Gear Solid: Peace Walker?',
         opcoes: [
             { resposta: 'Kazuhira Miller', correto: true },
@@ -70,6 +77,7 @@ export const questoes = [
         ]
     },
     {
+        imagem: require('./assets/question8.jpg'),
         questao: 'Em Metal Gear Solid 4, é apresentada uma nova personagem, Sunny. Quem é a mãe dela?',
         opcoes: [
             { resposta: 'Ela não tem mãe', correto: false },
@@ -80,6 +88,7 @@ export const questoes = [
         ]
     },
     {
+        imagem: require('./assets/question9.jpg'),
         questao: 'Qual é o grupo liderado por The Boss em Metal Gear Solid 3?',
         opcoes: [
             { resposta: 'Cobras', correto: true },
@@ -90,6 +99,7 @@ export const questoes = [
         ]
     },
     {
+        imagem: require('./assets/question10.jpg'),
         questao: 'Como The Boss ficou conhecida publicamente na história?',
         opcoes: [
             { resposta: 'Como uma grande guerreira, que evitou a terceira guerra mundial', correto: false },
@@ -100,6 +110,7 @@ export const questoes = [
         ]
     },
     {
+        imagem: require('./assets/question11.jpg'),
         questao: 'Qual é a musica dos créditos de Metal Gear Solid: Peace Walker?',
         opcoes: [
             { resposta: 'The Best is Yet to come', correto: false },
@@ -110,6 +121,7 @@ export const questoes = [
         ]
     },
     {
+        imagem: require('./assets/question12.jpg'),
         questao: 'Quem é Eli?',
         opcoes: [
             { resposta: 'A sniper que não fala', correto: false },
@@ -120,6 +132,7 @@ export const questoes = [
         ]
     },
     {
+        imagem: require('./assets/question13.jpg'),
         questao: 'Em MGSV, com que tipo de parasita das cordas vocais a mother base está infestada?',
         opcoes: [
             { resposta: 'Inglês', correto: false },
@@ -130,6 +143,7 @@ export const questoes = [
         ]
     },
     {
+        imagem: require('./assets/question14.jpg'),
         questao: 'Ishmael também é conhecido como?',
         opcoes: [
             { resposta: 'Big Boss', correto: true },
@@ -140,6 +154,7 @@ export const questoes = [
         ]
     },
     {
+        imagem: require('./assets/question15.jpeg'),
         questao: 'Quem é o mais jovem da lista?',
         opcoes: [
             { resposta: 'Chico', correto: false },
