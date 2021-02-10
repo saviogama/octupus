@@ -1,4 +1,5 @@
 import React from 'react';
+import { StatusBar } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { View, Text, Image, Button, TextButton } from './styles';
 
@@ -10,10 +11,11 @@ export default function Home() {
     }
 
     return (
-        <View>
-            <Text topSize={'30px'} bottomSize={'5px'} fontSize={'18px'}>Metal Gear Quiz</Text>
-            <Text topSize={'5px'} bottomSize={'30px'} fontSize={'14px'}>Teste os seus conhecimentos sobre a série de jogos criada por Hideo Kojima</Text>
+        <View paddingSize={StatusBar.currentHeight}>
+            <Text topSize={'5px'} bottomSize={'5px'} fontSize={'18px'}>Metal Gear Quiz</Text>
+            <Text topSize={'5px'} bottomSize={'5px'} fontSize={'14px'}>Teste os seus conhecimentos sobre a série de jogos criada por Hideo Kojima</Text>
             <Image source={require('../../assets/logo-mgs.png')} />
+            <Text topSize={'5px'} bottomSize={'35px'} fontSize={'12px'}>O quiz consiste de 15 perguntas, cada uma com 5 alternativas. Basta clicar em uma das alternativas e você será levado à próxima pergunta. Ao final do teste, será exibido o seu resultado.</Text>
             <Button onPress={navigateToQuiz}>
                 <TextButton>Iniciar</TextButton>
             </Button>

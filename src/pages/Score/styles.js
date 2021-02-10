@@ -2,6 +2,7 @@ import styled from 'styled-components/native';
 
 export const View = styled.View`
     flex: 1;
+    paddingTop: ${props => props.paddingSize}
     align-items: center;
     justify-content: center;
     background-color: #121212;
@@ -28,8 +29,8 @@ export const Image = styled.Image`
     resizeMode: contain;
     width: 95%;
     height: 10%;
-    margin-top: 15px;
-    margin-bottom: 50px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 `
 
 export const Button = styled.TouchableOpacity`

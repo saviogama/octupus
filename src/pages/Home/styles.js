@@ -1,7 +1,9 @@
 import styled from 'styled-components/native';
 
+
 export const View = styled.View`
     flex: 1;
+    paddingTop: ${props => props.paddingSize};
     align-items: center;
     justify-content: center;
     background-color: #121212;
@@ -10,17 +12,18 @@ export const View = styled.View`
 export const Text = styled.Text`
     margin-top: ${props => props.topSize};
     margin-bottom: ${props => props.bottomSize};
+    margin-left: 5px;
+    margin-right: 5px;
     font-size: ${props => props.fontSize};
     textAlign: center;
     color: rgba(255, 255, 255, 0.9);
 `
 
 export const Image = styled.Image`
-    resizeMode: contain;
+    resizeMode: center;
     width: 95%;
-    height: 35%;
-    margin-top: 50px;
-    margin-bottom: 100px;
+    margin-top: 60px;
+    margin-bottom: 60px;
 `
 
 export const Button = styled.TouchableOpacity`

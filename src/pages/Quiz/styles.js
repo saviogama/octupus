@@ -1,5 +1,11 @@
 import styled from 'styled-components/native';
 
+export const View = styled.View`
+    flex: 1;
+    paddingTop: ${props => props.paddingSize};
+    background-color: #121212;
+`;
+
 export const Header = styled.View`
     flex-direction: row;
     justify-content: space-between;
@@ -7,11 +13,6 @@ export const Header = styled.View`
     margin-bottom: 5px;
     margin-left: 15px;
     margin-right: 15px;
-    background-color: #121212;
-`;
-
-export const View = styled.View`
-    flex: 1;
     background-color: #121212;
 `;
 
@@ -30,10 +31,10 @@ export const Text = styled.Text`
 
 export const Image = styled.Image`
     resizeMode: contain;
-    width: 250px;
-    height: 250px;
-    margin-top: 1px;
-    margin-bottom: 1px;
+    width: 300px;
+    height: 200px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 `
 
 export const Button = styled.TouchableOpacity`
