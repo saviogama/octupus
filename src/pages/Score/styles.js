@@ -2,7 +2,7 @@ import styled from 'styled-components/native';
 
 export const View = styled.View`
     flex: 1;
-    paddingTop: ${props => props.paddingSize}
+    paddingTop: ${props => props.paddingSize};
     align-items: center;
     justify-content: center;
     background-color: #121212;

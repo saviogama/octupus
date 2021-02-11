@@ -1,14 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import { ScrollView, StatusBar, Animated } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import { CountdownCircleTimer } from 'react-native-countdown-circle-timer'
+import { CountdownCircleTimer } from 'react-native-countdown-circle-timer';
 import { View, Text, Image, Button, TextButton, Header, Content } from './styles';
 import { questoes } from '../../questoes';
+import Context from '../../context';
 
 export default function Quiz() {
+    const { currentQuestionData, scoreData, timer, setData, setTimerData, clsData } = useContext(Context);
     const navigation = useNavigation();
-    const [currentQuestion, setCurrentQuestion] = useState(0);
-    const [score, setScore] = useState(0);
+    const [currentQuestion, setCurrentQuestion] = useState(currentQuestionData);
+    const [score, setScore] = useState(scoreData);
+    const [altTimer, setAltTimer] = useState(600);
 
     const handleOptions = (correto) => {
         if (correto) {
@@ -18,7 +21,10 @@ export default function Quiz() {
         const nextQuestion = currentQuestion + 1;
         if (nextQuestion < questoes.length) {
             setCurrentQuestion(nextQuestion);
+            setData(nextQuestion, score);
+            setTimerData(altTimer);
         } else {
+            clsData();
             navigation.navigate('Score', { score: score });
         }
     };
@@ -30,19 +36,25 @@ export default function Quiz() {
                     <Text topSize={'5px'} bottomSize={'5px'} leftSize={'0px'} rightSize={'0px'} fontSize={'12px'}>Questão: {currentQuestion + 1}/15</Text>
                     <CountdownCircleTimer
                         onComplete={() => {
+                            clsData();
                             navigation.navigate('Score', { score: score });
                         }}
                         isPlaying
-                        duration={600}
+                        duration={timer}
                         size={39}
                         strokeWidth={3}
                         colors="#ED1C24"
                     >
-                        {({ remainingTime, animatedColor }) => (
-                            <Animated.Text style={{ color: '#FFFFFF' }}>
-                                {(Math.floor(remainingTime / 60) + ':' + (remainingTime % 60))}
-                            </Animated.Text>
-                        )}
+                        {({ remainingTime }) => {
+                            useEffect(() => {
+                                setAltTimer(remainingTime);
+                            }, [remainingTime]);
+                            return (
+                                <Animated.Text style={{ color: '#FFFFFF' }}>
+                                    {(Math.floor(remainingTime / 60) + ':' + (remainingTime % 60))}
+                                </Animated.Text>
+                            )
+                        }}
                     </CountdownCircleTimer>
                 </Header>
                 <Content>
